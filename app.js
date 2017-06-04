@@ -1,6 +1,10 @@
 var express = require("express");
 var moviesRouter = require("./routes/moviesRouter");
 
+var mongoose = require("mongoose");
+
+var db = mongoose.connect("mongodb://localhost/MoviesDB");
+
 var app = express();
 
 app.listen(3000,function(){
