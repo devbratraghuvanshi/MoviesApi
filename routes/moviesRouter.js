@@ -11,6 +11,7 @@ moviesRouter.route("")// movies router
 moviesRouter.route("/:id")// movies router
 .get(moviesController.getById)
 .put(moviesController.update)
+.patch(moviesController.patch);
 
 
 module.exports = moviesRouter;

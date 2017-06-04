@@ -64,6 +64,28 @@ var update = function (req, res) {
         }
     });
 };
+
+var patch = function (req, res) {
+    Movie.findById(req.params.id, function (error, movie) {
+        if (error) {
+            res.status(500);
+            res.send("internal server error");
+        } else {
+            for (var key in req.body) {
+                   movie[key] = req.body[key];
+            }
+            movie.save(function (error) {
+                if (error) {
+                    res.status(500);
+                    res.send("internal server error");
+                } else {
+                    res.status(200);
+                    res.send(movie);
+                }
+            });
+        }
+    });
+};
 // module.exports.get = get;
 // module.exports.add =add;
 
@@ -71,5 +93,6 @@ module.exports = {
     get: get,
     add: add,
     getById: getById,
-    update:update
+    update: update,
+    patch:patch
 };
