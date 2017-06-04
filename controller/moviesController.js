@@ -86,6 +86,26 @@ var patch = function (req, res) {
         }
     });
 };
+
+var del = function (req, res) {
+    Movie.findById(req.body.id, function (error, movie) {
+        if (error) {
+            res.status(500);
+            res.send("internal server error");
+        } else {
+            movie.remove(function (error) {
+                if (error) {
+                    res.status(500);
+                    res.send("internal server error");
+                } else {
+                    res.status(204);
+                    res.send("removed");
+                }
+            });
+        }
+    });
+};
+
 // module.exports.get = get;
 // module.exports.add =add;
 
@@ -94,5 +114,6 @@ module.exports = {
     add: add,
     getById: getById,
     update: update,
-    patch:patch
+    patch:patch,
+    del:del
 };
