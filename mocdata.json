@@ -1,0 +1,26 @@
+[{
+    "title" :"Captain Underpants: The First Epic Movie (2017)",
+    "gener" :"Animation | Action | Comedy | Family",
+    "rating": "8",
+    "isReseased":true
+},
+{
+    "title" :"Wonder Woman",
+    "gener" :"Action",
+    "rating": "8",
+    "isReseased":true
+},
+{
+    "title" :"Pirates of the Caribbean: Dead Men Tell No Tales (2017)",
+    "gener" :"Action",
+    "rating": "7.1",
+    "isReseased":true
+},
+{
+    "title":"Guardians of the Galaxy Vol. 2 (2017)",
+    "gener":"Action | Adventure | Sci-Fi",
+    "rating": "8.1",
+    "isReseased":true
+
+}
+]
