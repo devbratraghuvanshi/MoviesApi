@@ -9,7 +9,8 @@ moviesRouter.route("")// movies router
 .get(moviesController.get).post(moviesController.add);
 
 moviesRouter.route("/:id")// movies router
-.get(moviesController.getById);
+.get(moviesController.getById)
+.put(moviesController.update)
 
 
 module.exports = moviesRouter;
