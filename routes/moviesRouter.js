@@ -1,11 +1,10 @@
 
 var express = require("express");
+var moviesController = require("./../controller/moviesController");
+
 
 var moviesRouter = express.Router();
 
-moviesRouter.route("")
-.get(function(req, res){
-    res.send("list of movies");
-});
+moviesRouter.route("").get(moviesController);
 
 module.exports = moviesRouter;
