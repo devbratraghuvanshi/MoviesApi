@@ -1,6 +1,8 @@
 
 var express = require("express");
-var moviesController = require("./../controller/moviesController");
+var Movie = require("./../models/moviesModel")
+
+var moviesController = require("./../controller/moviesController")(Movie);//passing movie as dependency injection 
 
 
 var moviesRouter = express.Router();
