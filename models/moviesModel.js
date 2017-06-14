@@ -7,6 +7,6 @@ var moviesModel = new Schema({
     gener :String,
     rating: Number,
     isReleased:{type:Boolean, default:true}
-});
+},{collection:"Movies"});
 
 module.exports = mongoose.model("Movie",moviesModel);
